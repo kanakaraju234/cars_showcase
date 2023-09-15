@@ -3,7 +3,7 @@ import { fuels, yearsOfProduction } from "@/constants";
 import { FilterProps } from "@/types";
 import { fetchCars } from "@/utils";
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: any) {
   console.log("log--", searchParams);
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
